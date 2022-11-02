@@ -1,0 +1,142 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{float}
+\usepackage{amsmath}
+
+\usepackage[hmargin=3cm,vmargin=6.0cm]{geometry}
+\usepackage{graphics}
+%\topmargin=0cm
+\topmargin=-2cm
+\addtolength{\textheight}{6.5cm}
+\addtolength{\textwidth}{2.0cm}
+%\setlength{\leftmargin}{-5cm}
+\setlength{\oddsidemargin}{0.0cm}
+\setlength{\evensidemargin}{0.0cm}
+
+\usepackage{fitch}
+
+\begin{document}
+
+\section*{Student Information } 
+
+Full Name : Mehmet Rüçhan Yavuzdemir \\ 
+Id Number : 2522159 \\ 
+
+\section*{Answer 1}
+\textbf{a)}
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|c|c|c|c|c|c|}                        
+\hline
+\textbf{$p$} & \textbf{$q$} & \textbf{$\neg p$} & \textbf{$\neg q$} & \textbf{$p \land q$} & \textbf{$\neg p \vee \neg q$} & \textbf{$(p \land q) \leftrightarrow (\neg p \vee \neg q)$} \\
+\hline
+
+T & T  & F & F & T & F & F\\ 
+T & F & F & T & F & T & F\\    
+F & T & T & F & F & T & F\\    
+F & F & T & T & F  & T & F\\
+
+\hline
+\end{tabular}
+\end{table}
+\textbf{Therefore, $(p \land q) \leftrightarrow (\neg p \vee \neg q)$ is a contradiction.}\\
+\noindent\textbf{b)}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|c|}
+\hline
+
+\textbf{$p \rightarrow ((q \vee \neg q) \rightarrow (p \land q))$} & \textbf{given} \\
+\textbf{$p \rightarrow (T \rightarrow (p \land q)$} & \textbf{Table 6, Negation Laws} \\
+\textbf{$p \rightarrow (F \vee (p \land q))$} & \textbf{Table 7, Line 1} \\
+\textbf{$p \rightarrow ((p \land q) \vee F)$} & \textbf{Table 6, Commutative Laws} \\
+\textbf{$p \rightarrow (p \land q)$} & \textbf{Table 6, Identity Laws} \\
+\textbf{$\neg p \vee (p \land q)$} & \textbf{Table 7, Line 1} \\
+\textbf{$(\neg p \vee p) \land (\neg p \vee q)$} & \textbf{Table 6, Distributive Laws}\\
+\textbf{$(p \vee \neg p) \land (\neg p \vee q)$} & \textbf{Table 6, Commutative Laws}\\
+\textbf{$T \land (\neg p \vee q)$} & \textbf{Table 6, Negation Laws} \\
+\textbf{$(\neg p \vee q) \land T$} & \textbf{Table 6, Commutative Laws} \\
+\textbf{$(\neg p \vee q)$} & \textbf{Table 6, Identity Laws} \\
+
+\hline
+\end{tabular}
+\end{table}
+\textbf{Therefore, $p \rightarrow ((q \vee \neg q) \rightarrow (p \land q))$ and $(\neg p \vee q)$ are logically equivalent.}\\
+
+\section*{Answer 2}
+\textbf{a)} & \text{$\forall x \hspace{1mm} \exists y \hspace{1mm} W(x,y)$}\\\\
+\textbf{b)} & \text{$\neg \hspace{1mm} (\forall y \hspace{1mm} \exists x \hspace{1mm} F(x,y))$}\\\\
+\textbf{c)} & \text{$\forall x \hspace{1mm} (W(x,P) \rightarrow A(Ali, x))$}\\\\
+\textbf{d)} & \text{$\exists x \hspace{1mm} (W(Bü$ş$ra, x) \land F($TUBITAK$, x))$}\\\\
+\textbf{e)} & \text{$ \exists x \hspace{1mm} \exists y \hspace{1mm} \exists z \hspace{1mm} (S(x,y) \land S(x,z) \land (y \neq z))$}\\\\
+\textbf{f)} & \text{$\forall x \hspace{1mm} \forall y \hspace{1mm} \forall z \hspace{1mm} (W(x,z) \land W(y,z) \land (x $ = $ y))$}\\\\
+\textbf{g)} & \text{$\forall x \hspace{1mm} \forall y \hspace{1mm} \forall z \hspace{1mm} (W(x,z) \land W(y,z) \land (x \neq y) \land (\neg \hspace{1mm} (\forall t \hspace{1mm} (W(t,z) \land (t \neq x) \land (t \neq y)))))$}\\\\
+
+\section*{Answer 3}
+\[
+\begin{nd}
+   \hypo{1}  {p \rightarrow q}
+   \hypo{2}  {(q \land \neg r) \rightarrow s}            
+   \hypo{3} {\neg s}            
+   \open                              
+   \hypo{4} {p}
+   \have{5}{q}        \ie{1,4}
+   \open
+   \hypo{6} {\neg r}
+   \have{7} {q \land \neg r} \ai{5,6}
+   \have{8} {s}   \ie{2,7}
+   \have{9} {\bot}     \ne{3,8}
+   \close
+   \have{10} {\neg \neg r} \ni{6-9}
+   \have{11} {r} \nne{10}
+   \close
+   \have{12} {p \rightarrow r}        \ii{4-11}
+ \end{nd}
+\]
+
+\section*{Answer 4}
+\[
+\begin{nd}
+    \hypo{1}{p}
+    \hypo{2}{p \rightarrow (q \land r)}
+    \hypo{3}{r \rightarrow s}
+    \have{4}{q \land r} \ie{1,2}
+    \have{5}{q} \ae{4}
+    \have{6}{r} \ae{4}
+    \have{7}{s} \ie{3,6}
+    \open
+    \hypo{8}{s \rightarrow \neg q}
+    \have{9}{\neg q} \ie{7,8}
+    \have{10}{\bot} \ne{5,9}
+    \close
+    \have{11}{\neg(s \rightarrow \neg q)}\ni{8-10}
+\end{nd}
+\]
+\\
+\textbf{Therefore, Barış is lying.}\\
+
+
+\section*{Answer 5}
+\[
+\begin{nd}
+    \hypo{1}{\forall x \hspace{1mm} (P(x) \rightarrow (Q(x) \rightarrow R(x)))}
+    \hypo{2}{\exists x \hspace{1mm} (P(x))}
+    \hypo{3}{\forall x \hspace{1mm} (\neg \hspace{1mm }R(x))}
+    \open[c]
+    \hypo{4}{P(c)}
+    \have{5}{P(c) \rightarrow (Q(c) \rightarrow R(c))} \Ae{1}
+    \have{6}{Q(c) \rightarrow R(c)} \ie{4,5}
+    \have{7}{\neg \hspace{1mm} R(c)} \Ae{3}
+    \open
+    \hypo{8}{Q(c)}
+    \have{9}{R(c)} \ie{6,8}
+    \have{10}{\bot} \ne{7,9}
+    \close
+    \have{11}{\neg \hspace{1mm} Q(c)}\ni{8-10}
+    \have{12}{\exists x \hspace{1mm} (\neg Q(x))} \Ei{11}
+    \close
+    \have{13}{\exists x \hspace{1mm}(\neg Q(x))} \Ee{2, 4-12}
+\end{nd}
+\]
+\end{document}
