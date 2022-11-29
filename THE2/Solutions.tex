@@ -1,0 +1,108 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{float}
+\usepackage{amsmath}
+
+\usepackage[hmargin=3cm,vmargin=6.0cm]{geometry}
+%\topmargin=0cm                                                                                                                                                                                            
+\topmargin=-2cm
+\addtolength{\textheight}{6.5cm}
+\addtolength{\textwidth}{2.0cm}
+%\setlength{\leftmargin}{-5cm}                                                                                                                                                                             
+\setlength{\oddsidemargin}{0.0cm}
+\setlength{\evensidemargin}{0.0cm}
+
+%misc libraries goes here                                                                                                                                                                                  
+\begin{document}
+
+\section*{Student Information }
+Full Name : Mehmet Rüçhan Yavuzdemir \\
+Id Number : 2522159 \\
+
+\section*{Answer 1}
+
+Injective: One-to-one, every element matches with a unique element.\\
+Surjective: Onto, there is no element in range that is unmatched.
+
+\paragraph{a)} Since $\forall x$  $x^2 \geq 0$, $\exists t \in \mathbb{R}$ and $t \leq 0$. Hence, $f_1(x)$ is not surjective.\\
+
+$-1 \in \mathbb{R}$ and $1 \in \mathbb{R}$. $f_1(-1) = f_1(1) = 1 \in \mathbb{R}$. Since, we could find an counterexample, $f_1(x)$ is not injective.\\
+
+\paragraph{b)} Since $\forall x$  $x^2 \geq 0$, $\exists t \in \mathbb{R}$ and $t \leq 0$. Hence, $f_2(x)$ is not surjective.\\
+
+$f_2(0) = 0$ and $f'_2(x) > 0$ $\forall x > 0$. Hence, our function is strictly increasing and continuous, there will be one-to-one match. Hence, $f_2(x)$ is injective.\\ 
+
+\paragraph{c)} Since $\forall x \in \mathbb{R}$ $x^2 \geq 0$ $f_3(0) = 0$ and $f'_3(x) > 0$ $\forall x > 0$. So, $x^2$ is increasing and continuous. Hence, it covers all possible values in range.  $\forall t\in $ $\bar{\mathbb{R}^+}$ $\exists x \in \mathbb{R}$ s.t.  $x^2 = t$. Hence, our function is surjective. \\
+
+$-1 \in \mathbb{R}$ and $1 \in \mathbb{R}$. $f_3(-1) = f_3(1) = 1 \in \mathbb{R}$. Since, we could find an counterexample, $f_3(x)$ is not injective.\\
+
+\paragraph{d)} Since $\forall x \in \mathbb{R}$ $x^2 \geq 0$ $f_4(0) = 0$ and $f'_4(x) > 0$ $\forall x > 0$. So, $x^2$ is increasing and continuous. Hence, it covers all possible values in range.  $\forall t\in $ $\bar{\mathbb{R}^+}$ $\exists x \in \mathbb{R}$ s.t.  $x^2 = t$. Hence, our function is surjective. \\
+
+$f_4(0) = 0$ and $f'_4(x) > 0$ $\forall x > 0$. Hence, our function is strictly increasing and continuous, there will be one-to-one match. Hence, $f_4(x)$ is injective.\\ 
+
+\section*{Answer 2}
+\paragraph{a)} Let epsilon be greater than 0, for sake of simplicity, delta = 1/2. So, we get $|x - x_0| < 1/2$, x $\in \mathbb{Z}$. Since x different than $x_0$ is not applicable due to the domain, x = $x_0$. $|f(x) - f(x_0)| = 0 < epsilon$. Hence, f is continuous at $x_0$. Since $x_0$ is not specific, for all epsilon, there exists delta. All functions f: A $\subset$ $\mathbb{Z} \rightarrow \mathbb{R}$ are continuous everywhere.
+
+\paragraph{b)} Since our domain is not $\mathbb{R}$, we should guarantee that for all epsilon choices, $|f(x) - f(x_0)| = 0 < epsilon$ should be true and there exists delta. If we choose f as a constant function, we get $0 < epsilon$, which means for all epsilon, there exists delta that satifies all the conditions of limit definition. Hence, it is necessary and sufficient condition to choose $f(x) = c,$ $c \in \mathbb{Z}$ $x \in \mathbb{R}$.
+
+\section*{Answer 3}
+\paragraph{a)} In this question, we will make use of induction. 
+P(k) = The union of k countable sets are also countable.
+Let $A_1 = (a_{11}, \ldots, a_{1n})$
+Let $A_2 = (a_{21}, \ldots, a_{2n})$
+.
+.
+.
+Let $A_k = (a_{k1}, \ldots, a_{kn})$
+If we mix the elements in an order like $(a_{11}, a_{21}, a_{21}, b_{22} \ldots, a_{kn}, b_{kn})$, we will get a countable set.
+
+\noindent{Basis: for n = 2, $A \times A$ is countable.}\\
+Inductive Step: Assume that P(k) holds $\forall n \geq 2.$\\
+for n = k+1, the union of k countable sets are countable, and also according to the P, the union of countable sets are countable. Therefore, $X_k \times A_{k+1}$ is also countable.\\
+
+Thanks to the induction, this implication chain concludes that a finite Cartesian product of countable sets are also countable. 
+
+\paragraph{b)} According to the note, we can understand that $\mathbb{Z}^+$, $\mathbb{Z}$ and $\mathbb{Z \times Z}$ are countably infinite. This product forms $2^n$ N-tuples $(a_1, \ldots, a_n)$. If we can find a gap in A, we can conclude that infinite countable product of set $X = \{0,1\}$ with itself is countable since, according to the note, there is if and only if relation in the statement "a set A is countable if and only if there exists some f : Z → A that is surjective". We will create a N-tuple that contains one element from each N-tuple but the opposite number. That is, if the first tuple's first element is 1, take 0. If the second tuple's second element is 1, take 0 and so on, keep doing it along the diagonal. If we continue like that, we'll reach a brand-new tuple that is different from all N-tuples. Hence, there is a gap in A, range and image are different. This makes the function f not surjective. Consequently, that infinite product is uncountable - uncountably infinite. 
+
+\section*{Answer 4}
+First, I'll give an big-O example to explain how it works, then I'll use directly when I arrange them.
+For example, according to the big-O definition, let f(n) be $n^2$ and g(n) be $n^3$. $\exists c$ such that $f(n) \leq c*g(n)$ where $n\geq n_0 = 1$ and c = 1. Therefore, $n^2$ is big-O of $n^3$.\\
+
+\noindent Also, it is sufficient to check the limit of f(n)/g(n) when n approaches to infinity because big-O as a asymptotic notation cares when n is so large, how the function will behave. If the result of the limit is 0, denominator grows faster then numerator, if the result is $\infty$, then numerator grows faster then denominator. If we can find that the limit is 0, we can conclude that $\exists c$ and $\exists n \geq n_0$ such that $f(n) \leq c * g(n)$. As the example above, $\displaystyle{\lim_{n \to \infty}} \frac{n^2}{n^3} = \displaystyle{\lim_{n \to \infty}} \frac{1}{n} = 0. \\
+
+\noindent We should arrange in increasing order so that they become big-O of the next function. \\\\
+
+\textbf{$(\log{n})^2$, $\sqrt{n}\log{n}$, $n^{50}$, $n^{51}+n^{49}$, $2^n$, $5^n$, $(n!)^2$}
+
+\paragraph{a)} $\displaystyle{\lim_{n \to \infty}} \frac{(\log{n})^2}{\sqrt{n}\log{n}} = 0$\\\\ 
+if we use L'Hospital's rule one time, we get 0.                                                                                                                                                 
+\paragraph{b)} $\displaystyle{\lim_{n \to \infty}} \frac{\sqrt{n}\log{n}}{n^{50}} = 0$\\\\  
+if we use L'Hospital's rule one time, we get 0.                                                                                                                                              
+\paragraph{c)} $\displaystyle{\lim_{n \to \infty}} \frac{n^{50}}{n^{51} + n^{49}} = 0$\\\\ 
+if we divide both numerator and denominator by $n^{50}$, we get 0.
+\paragraph{d)} $\displaystyle{\lim_{n \to \infty}} \frac{n^{51} + n^{49}}{2^n} = 0$\\\\ 
+if we use L'Hospital's rule 51 times, numerator becomes constant; however, denominator is still includes n. We get 0.
+\paragraph{e)} $\displaystyle{\lim_{n \to \infty}} \frac{2^n}{5^n} = 0$\\\\
+if we convert this equation to $(2/5)^n$, we directly get 0.
+
+\paragraph{f)} $\displaystyle{\lim_{n \to \infty}} \frac{5^n}{(n!)^2} = 0$\\\\
+For large values of n, the factors of $(n!)^2$ grows but $5^n$'s are not. In addition to that, there are 2n factors at denominator, and n factor on numerator. While n tends to $\infty$, $(n!)^2$ grows much more faster than $5^n$. We could have used ratio test as well. In both cases, we get 0.\\\\
+
+\section*{Answer 5}
+\paragraph{a)}
+gcd(94,134) = gcd(134,94)\\
+134 = 94*1 + 40 \\
+94 = 40*2 + 14 \\
+40 = 14*2 + 12 \\
+14 = 12*1 + 2 \\
+
+\textbf{According to the Euclidean Algorithm, \\\\
+gcd(134,94) = gcd(94,40) = gcd(40,14) = gcd(14,12) = gcd(12,2) = 2}
+
+\paragraph{b)}
+To show that Goldbach's conjecture is equivalent to the given statement, we should prove it in both ways. If all even numbers greater than 2 can be written the sum of two primes, than if we add 2 or 3(both prime) to these even numbers, we'll cover all the numbers, and we'll sum three primes up. In addition to that, there will be no condition like being even. For example, 4 is an even number and it is the sum of 2 + 2. If we add 2 to 4, then we get 6 which is the sum of 2 + 2 + 2. If we add 3 to 4, then we get 7, 2 + 2 + 3. Again, 6 is an even number, and it is the sum of 3 + 3. If we add 2 to 6, then we get 8, the sum of 2 + 3 + 3. If we add 3 to 6, then we get 9, 3 + 3 + 3 and so on. Since we add 2 or 3 to the even numbers, our new starting condition is greater than 5, we can express all the numbers starting from 6 as the sum of three primes.\\
+
+Second, writing all the numbers greater than 5 as the sum of three primes implies if we substract 3 from all odd numbers and 2 from all even numbers, we get the sequence of even numbers that can be written as the sum of two primes, starting from 4, which is exactly what's being said in Goldbach's conjecture.\\\\
+\textbf{Therefore}, there is a if and only if relation between Goldbach's conjecture and the given statement, these two are equivalent.
+
+\end{document}
