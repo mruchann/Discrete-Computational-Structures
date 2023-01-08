@@ -65,17 +65,17 @@ To have a complete graph with 4 vertices, we should have 4 vertices with all deg
 \subsection*{e) }
 If we can color the graph with only two colors, with the constraint that adjacent vertices should have different colors, the graph is bipartite. Else, G is not bipartite. Let's assume we have white and black colors.
 
-Let a be painted with white, then b, c and e should be black since they are neighbours of a. However, there exists an edge between b and c, this contradicts our constraint. They cannot be in the same color. \textbf{Hence, G is not bipartite.}\\ 
+Let a be painted with white, then b, c, and e should be black since they are neighbors of a. However, there exists an edge between b and c, this contradicts our constraint. They cannot be in the same color. \textbf{Hence, G is not bipartite.}\\ 
 
 \subsection*{f) }
 
-There are 7 undirected edges. If we convert this graph into an directed graph that have G as its underlying undirected graph, we would have a 2 decisions for each edge. Hence, we have \textbf{$2^7 = 128$} directed graphs.
+There are 7 undirected edges. If we convert this graph into a directed graph that has G as its underlying undirected graph, we would have 2 decisions for each edge. Hence, we have \textbf{$2^7 = 128$} directed graphs.
 
 \subsection*{g) }
-A simple path is a path that does not include repeating vertices. Since we have 5 vertices, we can have a simple path with at most 4 edges. For example, \textbf{b-c-d-e-a} is an example of the longest simple path. Hence, our answer is \textbf{4}.
+The longest simple path is a path that includes possible the edges. We can include at most 6 edges. For example, \textbf{a-b-c-a-e-d-c} is an example of the longest simple path. Hence, our answer is \textbf{6}.
 
 \subsection*{h) }
-Let u and v be any the vertices in G. There are always a path between them in since graph G is a connected graph. There are no seperated other graphs and components left. Hence, G has only \textbf{1} connected component. 
+Let u and v be any of the vertices in G. There is always a path between them in since graph G is a connected graph. There are no separate other graphs and components left. Hence, G has only \textbf{1} connected component. 
 
 \subsection*{i) }
 An Euler circuit is a cycle that starts and ends at the same vertex and visits all the edges exactly once. The necessary condition for having an Euler circuit is that all vertices should have even degrees. If we find a vertex with an odd degree, by the definition of the Euler circuit, we can conclude that there is no Euler circuit in G. \\\\
@@ -136,9 +136,9 @@ H_E =
 
 \section*{Answer 3}
 
-For the Dijkstra's Algorithm, all we have to do is start by the source node. \\
+For Dijkstra's Algorithm, all we have to do is start with the source node. \\
 
-At each step, we will choose the non-visited node that has minimum distance, and explore its non-visited neighbours. Update the distance if new possible distance is smaller than the current distance.\\
+At each step, we will choose the non-visited node that has minimum distance, and explore its non-visited neighbors. Update the distance if the new possible distance is smaller than the current distance.\\
 
 We will denote a visited vertex by putting an apostrophe after it.\\
 
@@ -165,7 +165,7 @@ distance =
     & s'&u&w&v&x&y&z&t\cr
     &0&4&3&5&\infty&\infty&\infty&\infty\cr
 }
-mark s as visited and explore its neighbours\\
+mark s as visited and explore its neighbors \\
 \begin{matrix} 
 distance = 
 \end{matrix}\,
@@ -173,7 +173,7 @@ distance =
     & s'&u&w'&v&x&y&z&t\cr
     &0&4&3&5&11&\infty&15&\infty\cr
 }
-mark w as visited and explore its neighbours\\
+mark w as visited and explore its neighbors \\
 \begin{matrix} 
 distance = 
 \end{matrix}\,
@@ -181,7 +181,7 @@ distance =
     & s'&u'&w'&v&x&y&z&t\cr
     &0&4&3&5&11&15&15&\infty\cr
 }
-mark u as visited and explore its neighbours\\
+mark u as visited and explore its neighbors \\
 \begin{matrix} 
 distance = 
 \end{matrix}\,
@@ -189,7 +189,7 @@ distance =
     & s'&u'&w'&v'&x&y&z&t\cr
     &0&4&3&5&7&11&15&\infty\cr
 }
-mark v as visited and explore its neighbours\\
+mark v as visited and explore its neighbors \\
 \begin{matrix} 
 distance = 
 \end{matrix}\,
@@ -197,7 +197,7 @@ distance =
     & s'&u'&w'&v'&x'&y&z&t\cr
     &0&4&3&5&7&8&13&\infty\cr
 }
-mark x as visited and explore its neighbours\\
+mark x as visited and explore its neighbors \\
 \begin{matrix} 
 distance = 
 \end{matrix}\,
@@ -205,7 +205,7 @@ distance =
     & s'&u'&w'&v'&x'&y'&z&t\cr
     &0&4&3&5&7&8&12&17\cr
 }
-mark y as visited and explore its neighbours\\
+mark y as visited and explore its neighbors \\
 \begin{matrix} 
 distance = 
 \end{matrix}\,
@@ -213,7 +213,7 @@ distance =
     & s'&u'&w'&v'&x'&y'&z'&t\cr
     &0&4&3&5&7&8&12&15\cr
 }
-mark z as visited and explore its neighbours\\
+mark z as visited and explore its neighbors \\
 \begin{matrix} 
 distance = 
 \end{matrix}\,
@@ -221,9 +221,9 @@ distance =
     & s'&u'&w'&v'&x'&y'&z'&t'\cr
     &0&4&3&5&7&8&12&15\cr
 }
-mark t as visited and explore its neighbours\\
+mark t as visited and explore its neighbors \\
 
-Hence, shortest path from s to t is : \textbf{s-v-x-y-z-t} with cost 15.
+Hence, the shortest path from s to t is \textbf{s-v-x-y-z-t} with cost 15.
 \section*{Answer 4}
 \subsection*{a) }
 
